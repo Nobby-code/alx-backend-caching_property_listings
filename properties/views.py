@@ -13,7 +13,8 @@ from .utils import get_redis_cache_metrics
 
 def property_list(request):
     properties = get_all_properties()
-    return JsonResponse(properties, safe=False)
+    # return JsonResponse(properties, safe=False)
+    return JsonResponse({"data": properties}, safe=False)
 
 def cache_metrics(request):
     metrics = get_redis_cache_metrics()
